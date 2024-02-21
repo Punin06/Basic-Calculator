@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	
+</head>
+<body style="text-align: center; background-color: orangered;">
+	<h1> Enter 2 numbers</h1>
+		<input id = "num1"> </input>
+	<input id = "num2"> </input>
+	<br></br>
+	<select id ="op">
+     <option value="+"> + </option>
+     <option value ="-"> - </option>
+<option value ="*"> * </option>
+<option value ="/"> / </option>
+	 </select>
+	<button onclick="Calc()">Enter</button>
+	<br></br>
+	<label id ="last"> <h3> Last Expression </h3></label>
+	<br></br>
+	<label id ="la"> <h3>Value Here</h3> </label>
+
+
+
+<script>
+
+	function Calc () 
+	{
+		o = document.getElementById("op")
+		os = o.value
+		if(os == "+")
+		{
+			document.getElementById("la").innerHTML = parseInt(document.getElementById("num1").value) + parseInt(document.getElementById("num2").value)
+			document.getElementById("last").innerHTML = "Expression = " + (document.getElementById("num1").value) + " + " + (document.getElementById("num2").value)
+		} 
+
+		else if (os=="-")
+		{
+			document.getElementById("la").innerHTML = (document.getElementById("num1").value) - (document.getElementById("num2").value)
+			document.getElementById("last").innerHTML = "Expression = " + (document.getElementById("num1").value) + " - " + (document.getElementById("num2").value)
+		}
+
+		else if (os =="*")
+		{
+			document.getElementById("la").innerHTML = (document.getElementById("num1").value) * (document.getElementById("num2").value)
+			document.getElementById("last").innerHTML = "Expression = " + (document.getElementById("num1").value) + " * " + (document.getElementById("num2").value)
+		}
+		
+		else 
+		{
+			document.getElementById("la").innerHTML = (document.getElementById("num1").value) / (document.getElementById("num2").value)
+			document.getElementById("last").innerHTML = "Expression = " + ((document.getElementById("num1").value) + " / " + (document.getElementById("num2").value))
+		}
+
+
+	}
+</script>
+</body>
+</html>
